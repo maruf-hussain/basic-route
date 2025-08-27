@@ -15,7 +15,7 @@ export default function Header() {
     <nav className="bg-blue-800 text-white">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
-        <div className="text-xl font-bold">MySite</div>
+        <div className="text-xl font-bold">Meal Db</div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">
