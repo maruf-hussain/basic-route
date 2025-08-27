@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLoaderData } from 'react-router';
+import { useLoaderData, useNavigate } from 'react-router';
 
 
 export default function MealDetails() {
@@ -7,6 +7,10 @@ export default function MealDetails() {
   const meal = data.meals[0];     // প্রথম meal object নেওয়া হলো
   const { strMeal, strMealThumb, strCategory, strArea, strInstructions } = meal;
 
+  const nabigate = useNavigate();
+  const goBack = () => {
+    nabigate(-1);
+  }
 
   return (
     <div className='m-20'>
@@ -16,6 +20,8 @@ export default function MealDetails() {
         <p>Category: {strCategory}</p>
         <p>Area: {strArea}</p>
         <p>Instructions: {strInstructions}</p>
+
+        <button className='bg-black p-4 mt-3 text-amber-50' onClick={goBack}>Go Back</button>
         
     </div>
   )
